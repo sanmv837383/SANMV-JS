@@ -13,7 +13,10 @@ const bigNumber = 3456567n
 
 
 javascript is statically typed or dynamically typed statically typed or dynamically typed???
-Reference (non primitive)
+
+
+Reference (non primitive) datatype
+
 array, objects, functions
 
 const heroes = ["shaktiman","avengers"];     -- reference type or non returnable type
@@ -30,4 +33,22 @@ return typr os object function
 mention and find out the return type of everything mentioned here
 
 console.log(typeof anotherId);
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+stack(primitive type) heap memory(non primitive)
+
+let myYoutubeName = "sanjanadotcom"
+
+let anotherName = myYoutubeName
+
+anothername = "sana"
+
+whenever we use stack always the copy of what is existing is being altered not the main answer hence here in the shown
+the value of the variable myYoutubeName is sanjanadotcom and it has not changed
+
+here in the heap memory there is no copy created we just refer to the existing condition and refer to that condition
+in heap memory only the non primitive data can be entered 
+
 */
