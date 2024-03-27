@@ -1,0 +1,66 @@
+Javascript execution context
+
+{} global execution context
+in 'this' variable global EC is kept
+in browser the global ec is - window
+this executes completely in thread
+javascript is single threaded program
+
+
+functional/function execution context
+
+
+Eval execution context
+
+{} memory creation phase/ creation phase - the variables declared memory is being allocated
+Execution phase
+
+there is code here look how the code will get executed step by step
+
+let val1 = 10
+let val2 = 5
+function addNum(num1, num2){
+    let total = num1 + num2return total
+}
+let result1 = addNum(val1, val2)
+let result2 = addNum(18, 2)
+
+global execution --> using this
+memory phase val1 --> undefined
+val 2 --> undefined 
+addnNum --> definition (everything in parenthesis goes int his)
+resulyt1 --> undefined
+result2 --> undefined
+
+execution phase
+val 1 = 10
+val 2 = 5
+addNum = new variable environment + execution thread
+everytime a function is made a new executional context is created
+again for function the memory execution phase and the execution phase is created again
+
+memory phase 
+val 1 --> undefined
+val 2 --> undefined
+total --> undefined
+
+execution context
+num1 --> 10
+num2 --> 5
+total --> 15
+total here is returned in the global executional context
+
+the sand box created for the function is deleted as soon as the work is done
+and then the result is given back to the execution phase which was there earlier
+ result1= 15
+ result2 = 
+
+ again a sand box is created 
+ new variable environment + thread memory phase and ecxecution context
+
+
+call stack
+global executionas the functions execute it gets out of the stack
+works like stack only lifo
+last in first out
+
