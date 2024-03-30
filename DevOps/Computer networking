@@ -34,4 +34,7 @@ for google only the global ip address is visible not local ip address
 port numbers
 ip address where is computer located
 port number which application are you using 
-port is 16 bit number - each cell na contain 2 nubers 0/1 - 2^16 == 65000 - total port numbers possible
+port is 16 bit number - each cell contain 2 numbers 0/1 - 2^16 == 65000 - total port numbers possible
+
+
+
