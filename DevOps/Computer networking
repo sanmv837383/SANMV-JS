@@ -35,6 +35,73 @@ port numbers
 ip address where is computer located
 port number which application are you using 
 port is 16 bit number - each cell contain 2 numbers 0/1 - 2^16 == 65000 - total port numbers possible
+HTTP - 80
+MONGODB - 27017
+SQL - 1433
+0 - 1023 - reserved ports 
+1024 - 49152 - registered for applications like mongodb mysql etc
+remaining ports can be used
+
+1Mbps - mega bits per second - 1000000 bits/s
+1 gbps = 10^9 bits/s
+1kbps = 1000 bits/s
+
+submarine cable.com - 28000 km
+physically : optical fibre cables, coaxial cables
+wireless: bluetooth, wifi, 3g 4g 5g
+
+LAN: connected by ethernet cable, wifi, small house/ office
+MAN: metroploian area network across city
+WAN: wide area network across country
+optical fibre cables
+SONET - synchronous optical networking
+Frame relay local area network is connected to wider area network
+
+TOPOLOGY
+BUS topology
+RING topology
+STAR topology
+TREE topology (combination of bus and start)
+MESH topology - every computer is connected to every other computer
+
+Structure of network
+Application layer 
+OSI model - open system interconnection model 
+7 layers
+Applicaton layer - browser and messaging layer, network application like skype etc
+Presentation layer - data from the application layer , these data or the character 
+will be converted to machine understandable binary format. From ASCII to EBC EIC this is called translation
+Encoding and encryption happens here SSL-secure software layer, abstraction, data is compressed 
+Session layer - helps in setting up and managing the connections and enables the sending and receiving the data followed by the termination of the connected session
+authentication username and password,authorisation , it just establishes the session
+Transport layer - udp and tcp - data received from the session layer is divided into the small segments called the segmentation
+every segment will contain the source and destination sequence number, flow control(transport layer control amount of data being sent) error control (checksum) and the port number
+Network layer - router - logical addressing(ip addressing done here) it assigns the senders and receivers ip address in every segment and it forms an 
+IP packet so that every data packet is reaching to the correct destination, load balancing
+Data link layer - allows you to directly communiate with the host, logical addressing - network layer about ip address senders and receivers ip address
+Physical addressing - mac adresses(12 digit alpha numeric number of the network interface of you computer computer bluetooth and wifi have different mac address) are sent to 
+the sender and receiver to form a frame(data unit of the data link layer) and transport this frame. 
+It also controls how the data is placed and received from the media using media access control
+techique used to control the error detection
+Physical layer - hardware section it transmits the electrical segments, radio signal, in receivers segment- physical layer receives the signal converts into bits 
+and pass it into the datalink layer as a frame and moves in higher hierarchy
+
+Another model
+TCP IP MODEL
+5 layers
+Application layer : users interact, lies on the device, protocols client server architecture
+server - 
+data center- collection of huge number of computers static ip addresses, good internet connection and high 
+Transport : 
+network
+data link
+physical layer
+
+
+
+
+
+
 
 
 
