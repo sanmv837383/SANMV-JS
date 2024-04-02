@@ -1,0 +1,117 @@
+Linked list is an linear data structure, which consists of a group of nodes in a sequence [OR] 
+Linked list in which we store data in linear from!
+
+Difference between linked list and array is that 
+while creating array we have to initialise it using it's size
+eg: int arr[] = new int[8]
+Array:- [10,12,13,14,15,16,17,18,19,11]
+
+but linked list is dynamic we don't define its size, hence we can add more elements here
+but in array we cannot add more elements hence we have to create a new array
+list has : head and nodes
+
+there are 4 types of linked lists
+ -> singly linked list
+ -> doubly linked list
+ -> circular linked list
+ -> circular doubly linked list
+
+time complexity
+access: O(n)
+search: O(n)
+insert: O(1)
+remove: O(1)
+
+----------creating a linked list----------
+class Node{
+    int data;
+    int next;
+    node(int data){
+        this.data = data;
+    }
+}
+-----------assigning values in linked list--------------
+void main(){
+    Node n1 = new Node(10);
+    Node n2 = new Node(20);
+    Node n3 = new Node(30);
+
+    Node head = n1;
+    head.next = n2;
+    n2.next = n3;
+    n3.next = null; 
+}
+-------------------traverse in linked list----------------
+class Node<TreeNode>{
+    TreeNode data;
+    Node next;
+    Node(TreeNode data){
+        this.data = data;
+    }
+}
+
+void main(){
+    traverse(head);
+}
+
+void traverse(Node head){
+    Node curr = head;
+
+    while(curr != null){
+        print(curr.data);
+        curr = curr.next;
+    }
+}
+
+Delete an element(node) from linked list
+
+void main(){
+    delete(head, 3);
+}
+
+void delete(Node head, int pos){
+    //base Condition
+    if(pos == 0){
+        head == head.next;
+        return;
+    }
+
+    Node prev = head;
+    
+    for(int i = 0; i < pos - 1; i++){
+        prev = prev.next;
+    }
+    prev.next = prev.next.next;
+}
+
+NOTE: In java, if there is no reference to a node in linked 
+list, garbage collector will take it off.
+
+Reverse a Linked List
+Middle of the Linked List
+Delete Node in a Linked List
+Merge Two Sorted Linked List
+Remove duplicates from sorted list
+Intersection of two linked list
+Linked List Cycle
+Palindrome Linked List
+Swapping Nodes in a Linked List
+Odd Even Linked List
+Remove nth node from Linked List
+Add Two Numbers
+Swap Nodes in Pairs
+Split Linked List in Parts
+Insertion sort on Linked List
+Merge sort on Linked List
+Copy list with random pointers
+Remove zero sum from consecutive nodes from linked list
+Merge k sorted Linked List
+Reverse nodes in k group
+Doubly Linked List
+Adding a node at the front, at the end, after a node or before a node
+Deleting a node from the front, from the end, after a node or before a node
+Circular Doubly Linked List
+Adding a node at the front, at the end, after a node or before a node
+Deleting a node from the front, from the end, after a node or before a node
+LRU Cache
+LFU Cache
