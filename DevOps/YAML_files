@@ -1,0 +1,140 @@
+YAML - YAML ain't markup language
+It is not a programming language it is a data format
+Data format used to exchange data
+similar to XML and JSON
+In YAML you can store only data and not the command
+Data serialization
+a process of converting the data object into a stream of storage - serialization
+stream --> object - deserialisation
+Object is code + data if we have to transfer this data into different outputs
+YAML is used to store data serialization language
+configuration files - docker, kubernatives etc
+logs, cahes etc
+Benefits of YAML 
+Simple and Easy to ready
+Strict syntax (indentation is important)
+Easily converted to JSON, XML
+Most languages use YAML
+more powerful when representing complex data
+various tools - parses
+parsing is easy
+it has key value pair
+maps and hashed maps are there in it
+it can have different number of documents
+it is case sensitive
+... end of file
+datatypes
+name: sanjana
+fruit: "apple"
+fruit: 'apple' 
+after colon whatever is writte is variable
+writing a single line in multiple lines
+message: >
+this will
+all be
+in one single line
+same as
+message: this will all be in one single line
+number: 5437
+marks: 98.45
+booleanValue: No   #n, N,false,False,False
+#specify the type
+zero: !!int 0
+positiveNum: !!int 45
+negativeNum: !!int -45
+binaryNum: !!int 0b11001
+octalNumber: !!int 06574
+hexa: !!int 0x45
+commaValue: !!int +540_000 #540,000
+exponential numbers: 6.023E56
+floating point numbers
+marsk: !!float 56.67
+infinite: !!float .inf
+not a num: .nan
+booleanValue: !!bool No
+#null
+surname: !!null Null # or null Null ~
+~: this is a null key
+#dates and time can be added
+date: !!timestamp 2002-12-14
+india time: 2001-12-15T02:59:43.10 +5:30
+no time zone: 2001-12-15T02:59:43.10
+Advance datatypes
+student: !!seq
+ - marks
+ - name
+ - roll_no
+can be written like this
+cities: [new delhi, mumbai]
+#some of the keys of the seq will be empty
+#sparse seq
+sparse seq:
+ - hey
+ - how
+ - NUll
+ - sup
+#nested sequence
+-
+ - mango
+ - apple
+ - banana
+-
+ - marks
+ - roll num
+ - date
+# key value pairs are called maps
+nested maps
+name: sanjana
+role: 
+ age: 20
+ job: student
+#same as
+name: Sanjana
+role: { age: 23, job: student}
+#pairs: keys may have duplicate values
+# !!pairs
+pair example: !!pairs
+ - job: student
+ - job: teacher
+same as
+pair example: !!pairs [job: student, job:teacher]
+# this will be an array of hashtables
+# !!set will allow you to have unique values
+names: !!set
+ ? Sanjana
+ ? Kunal
+ ? Rahul
+# dictionary !!omap
+people: !!omap
+ -Kunal:
+    name: Sanjana
+    age: 78
+    height: 678
+ -Rahul:
+    name: Rahul
+    age: 50
+    height: 678
+# reusing some properties
+likings:
+ fav fruit: mango
+ dislikes: grapes
+person1:
+ name: Kunal khushwaha
+ fav fruit: mango
+ dislikes: grapes
+person2:
+ name: al khushwaha
+ fav fruit: mango
+ dislikes: grapes
+person3:
+ name: K\l khushwaha
+ fav fruit: mango
+ dislikes: grapes
+since we cannot keep on copy pasting this we use anchors
+likings: &likes
+ fav fruit: mango
+ dislikes: grapes
+person1:
+ name: Kunal khushwaha
+ <<: *likes
+ XML and JSon is being written
