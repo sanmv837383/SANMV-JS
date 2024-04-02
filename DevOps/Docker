@@ -1,0 +1,35 @@
+whenever you are creating a application you have to place it in the server for that you had to buy a server in ancient times
+you can only place one application in one server
+VMWare - created virtual machines and solved this problem
+Here we can place multiple application in one server
+virtual machine requires there own OS hence it was still not solving the problem
+not fast
+storage cpu allocation ram allocation
+issues with having various dependencies
+Virtual machines- this creates different operating system for the application to work
+Containers this doesnt create different OS but this works on the virtual machine
+Windows : Docker desktop wsl windows system for linux
+Runtime --> engine --> Orchestration
+Runtime is used to stop the container
+There are two types of runtime
+- runc (low level runtime)
+works with the operating system and starts and stops the container
+- container d 
+role is to managing runc , it helps in managing containers , how to get data into the container network from internet
+Engine
+Docker daemon
+server daemon --> REST API --> docker CLI
+in----------------------------> out
+api - create the docker delete the docker these commands can be given using REST api
+Orchestration - it allows us to manage the container
+dish- application
+docker image or container image - it is just a file that contains the instruction
+container is the running instance of an image
+docker file - reciepe
+docker file --> image --> container
+template    -->  class --> object
+or list of instructions
+Open container initiative OCI
+docker is the tool which has container in it running on the operating system but its isolated it doesnt knows what is going outside the container
+container is the isolated environment in which we can run the application
+docker files also containes th os files which hels in running the program
