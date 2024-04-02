@@ -1,0 +1,92 @@
+ARPA - advance reszearch project agency
+ARPA net - mit stanford UCLA UTAH
+protocol - some rules which are made by the people like video conference , important file transferring
+everything has different requirement and based on that requirement different protocols are defined - tcp ip udp
+internet society creates the rules for how the things should be
+rfc editor - request for comments can suggest what to do in internet society
+Client server architecture
+client --> request --> server
+server --> response --> client
+Protocols
+TCP - transpecian control protocol
+ensure that data will reach its destination and not get corrupted
+UDP - user datagram protocol
+not all data is reached properly and that's fine by us
+HTTP- hypertext transfer protocol used by world wide web
+the format of the database is being forwarded using this
+How data is transfered
+data is sent in packets
+these servers and computers and identified by their IP address
+X.X.X.X every single X here can have the numbers from 0 -m 255
+to check the ip address of my internet provider
+$ curl if config.me -s
+internet service provider - ISP - airtel
+ISP --> modem/router - it has global IP address 
+hence devices connecting to this ISP will ahve same IP address
+the different ip address would be given to the different devices connected they are known as local IP ddress
+DHCP - dynamic host configuration protocol   // this will assign the different ip address to different device
+for google only the global ip address is visible not local ip address
+port numbers
+ip address where is computer located
+port number which application are you using 
+port is 16 bit number - each cell na contain 2 nubers 0/1 - 2^16 == 65000 - total port numbers possible
+
+peer to peer 
+scale it largely
+
+Protocols
+TCP/IP : HTTP, DHCP, FTP, SMTP, POP3 and IMAC, SSH,VNC, Telnet(port 23)
+UDP : stateless connection
+Applications
+thread: set up a page to send message
+sockets: the interface between the process and the internet
+ports: which application we are working with
+ephemeral ports
+HTTP uses TCP
+stateless
+http is application layer
+tcp is transport layer
+HTTP method
+GET method
+PUT method
+POST
+DELETE
+Status codes
+1XX - informational 
+2XX - success
+3XX - Redirectory
+4XX - client error
+5XX - server error
+Cookies: unique strig
+stored in browser
+cookiees have expiration time
+
+When we have to connect with the two or more devices then we have to connect using a switch then we have to bbuild a switch 
+between them to connect. To connect them to a switch we need an interface (physical or virtual depending on the host) 
+To see the intefaces of the host we use ip link command here we use the interface name eth0 to connect to the switch
+switch IP address is : 192.168.1.0 then we assign the devices with same usingip addr add 192.168.1.10/24dev eth0
+hence now the computers can talk using these switch
+now this is a system created. similar to this there are many systems how does communication between the system happens
+Now we need a router to connect two networks it is another server with many network ports , since it gets connected to two different network it gets assigned with two different ip address of both the networks. 
+Gateway - to see the existing routing run rout command
+add the gateway so that two system can talk using ip route add 192.168.2.0/24 via 192.168.1.1
+now the route is added in B do this in C too
+There is a default gateway which would help in accessing all the request outside of the system - default router - 0.0.0.0 
+If we have the multiple network one for the internet and another for the inter connection then we will need to have separate entries
+a is connected to b and b is connected to c how does a connect to c
+by default in linux the packets received are not forwarded from one system to another
+consider eth0 is private network and eth1 is public network then they both cannot forward the information hence if both the system is in eth0 then we can share the files
+this is governed by the setting cat/proc/sys/net/ipv4/ip_forward
+by default the value in this setting is 0 which means not allowed but if the values are set to 1 then the ping goes through and we can see if it is allowed. we cannot change this simply to modify we have to use /etc/sysctl.conf
+DNS
+cat >> /etc/hosts         --> assigning db name to the ip address  --  this is called name resolution
+192.168.1.11    db
+to resolve a name and match to the ip address we point it out to the dns server 
+cat /etc/resolv.conf   --> is where you store the servers and if updation needed then it is done here
+.com(commercial or general purpose) . is the root -
+.net(network)
+.edu(educational)
+.org(non profit organisation)
+.io 
+nslookup
+dig
