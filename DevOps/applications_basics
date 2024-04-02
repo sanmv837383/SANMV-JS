@@ -1,0 +1,11 @@
+JDK Java development kit
+Develop 
+	Jdb- java debugger tool
+	Javadoc - to document the source code
+
+Build 
+	Javac- build and compile
+	Jar - tool helps in archive the code in jar files
+Run
+	JRE - java runtime environment 
+	Java - command line utility that is used to run the code
