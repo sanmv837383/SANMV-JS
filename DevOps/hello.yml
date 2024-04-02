@@ -1,0 +1,14 @@
+"apple" : "I am a red fruit"
+1: "sanjana is always first"
+---
+# lists
+- apple
+- mango
+- banana
+- Apple
+---
+cities:
+- new delhi
+- banglore
+- mumbai
+...
