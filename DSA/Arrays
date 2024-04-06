@@ -1,0 +1,73 @@
+If the array is initialised in main function then it holds garbage values
+If it is declared before the int main then it is called global then the array contains 0 in it.
+max size if array that we can declare is 10^6
+when we declare it globally the array size is 10^7
+accessing the array using address is not possible hence we access it using the index
+
+************************finding the largest element of the array***********************
+--> can be found by sorting the array and then taking the last elemnt out as the largest element og the array
+--> consider the first element as the biggest element and iterate through the array and find the largest element of the array
+a[0] = largest
+for (i=1; i>n; i++){   // since we have stored the 0th element in largest we will start from 1st index
+    a[i] > largest;
+    largest = a[i];
+}
+print(largest);
+
+*************************finding the second largest element of the array without sorting*********************
+--> the sorting of the array is done and then the arr[n-1] is compared with arr[n] 
+if both are not same then arr[n-1] is the second largest element (brute force method)
+we will start from the back for(i=n-2)
+largest = arr[n-1]
+for(i=n-2; i<=0; i++){
+    if(arr[i] != largest)
+    {
+        secondl = arr[i];
+        break;
+    }
+}
+OPTIMAL SOLUTION
+
+int largest = arr[0];
+int secondl = -1;
+for(i = 1; i<n; i++){
+    if(arr[i] > largest){
+        secondl = largest;
+        largest = arr[i];       
+    }
+    else if(arr[i] < largest && arr[i] > secondl){
+        secondl = arr[i];
+    }
+}
+*************************finding the second smallest element of the array without sorting********************
+
+int smallest = arr[0];
+int seconds = -1;
+for(i=1; i<n; i++){
+    if(arr[i] < smallest){
+        seconds = smallest;
+        smallest = arr[i];
+    }
+    else if(arr[i] != smallest && arr[i] < seconds){
+        seconds = arr[i];
+    }
+}
+
+***************************check if array is sorted************************
+for(i=0; i<n; i++){
+    if(arr[i] > arr[i-1]){
+
+    }else{
+        return false;
+    }
+}
+return true;
+
+************************remove duplicates from a asorted array*******************
+for(i = 0; i<n; i++){
+    if(arr[i] == arr[i-1]){
+        delete arr[i];
+    }
+}
+##########above is my solution try on that again###########
+
