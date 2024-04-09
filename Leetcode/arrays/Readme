@@ -1,0 +1,43 @@
+Left rotate the array
+left rotate array by 1 place
+left rotate by array by n place
+right rotate the array
+
+
+move all zeros to the end of array
+arr[] = {1, 2, 0, 3, 0, 4, 5, 6, 0, 0, 7 }   -->  {1, 2, 3, 4, 5, 6, 7, 0, 0, 0, 0}
+// brute force approach
+temp = []
+for(i=0; i<n; i++){
+    arr[1] != 0;
+    temp.add(arr[i])
+} 
+//put temp in array
+for(i=0; i<temp.size(); i++){
+    arr[i] = temp[i]
+}
+// filling up the zero at the back
+// after the non zero elements tht is size of non zero elements
+// nonzero element nz
+for(i = nz; i<n; i++){
+    arr[i] =0;
+}
+
+// optimal approach
+// using 2 pointer approach find the zero in the array and move the non zero in beginning and zero to end of the array
+j = -1;
+for(i=0; i<n; i++){
+    if(arr[i] == 0){
+    j = i;
+    break;
+    }
+}
+for(i = j+1; i<n; i++){
+    if(arr[i] != 0){
+        swap(arr[i],arr[j])
+        j++;
+    }
+
+}
+
+Linear search
