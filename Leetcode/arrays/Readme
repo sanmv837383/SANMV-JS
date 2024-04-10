@@ -23,7 +23,7 @@ for(i = nz; i<n; i++){
     arr[i] =0;
 }
 
-// optimal approach
+// *****************************optimal approach*************************************
 // using 2 pointer approach find the zero in the array and move the non zero in beginning and zero to end of the array
 j = -1;
 for(i=0; i<n; i++){
@@ -41,3 +41,51 @@ for(i = j+1; i<n; i++){
 }
 
 Linear search
+arr=[1,2,3,4,5]
+for(i=0; i<n; i++){
+    if(arr[i] == num){
+        return i;
+    }
+    return -1;
+}
+
+Union and intersection of two sorted arrays
+
+Union of sorted arrays
+arr1 = [1,1,2,3,4,5]
+arr2 = [2,3,4,4,5,6]
+union = [1,2,3,4,5,6]        --> answer
+here only unique values are there in the answer whenever we hear unique then we think of map and sorted
+here the optimal solution is to use two pointer method
+int n1 = a.size();
+int n2 = b.size();
+int i = 0;
+int j = 0;
+array declaration
+while(i<n1 && j<n2){
+    if(a[i] <= b[j]){
+        if(unionArr.size() == 0 || unionArr.back() != a[i]){
+        unionArr.push+back(a[i]);
+        }
+        i++;
+    }
+    else{
+        if(unionArr.size() == 0) || unionArr.back() != a[j]){
+        unionArr.push+back(a[j]);
+        }
+        i++;
+    }
+}
+*************its not complete study again************
+
+
+********************missing number in the array*********************
+arr = [1, 3, 4, 5]
+sum = n*(n+1)/2;
+s2 = 0;
+for(i = 0; i<n-1; i++){
+    s2+ = arr[i]
+    return(sum - s2)
+}
+// what if there are two missing numbers?
+
