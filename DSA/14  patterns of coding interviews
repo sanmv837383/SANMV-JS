@@ -1,0 +1,42 @@
+Sliding window - used to perform a required operation on a specific window size of given  array or linked list
+Input is a linear data structure array,string,linked list
+when asked to find longest/shortest substring,subarray or desired value
+
+common problems:
+maximum sum subarray of size K
+longest substring with k distinct characters
+string aanagrams
+
+Two pointers or iterators
+where two pointers iterate through the data structure until both hit certain condition
+Useful when searching pairs in sorted array or linked list/ when you have to compare each element of
+an array with other elements
+
+ways to identify when to use two pointers
+it will feature problem where you deal with sorted arrays(linked list) and need to find a 
+set of elements that fulfill certain constraints
+the set of elements in the array is a pair, a triplet, or even a subarray
+
+Here are some problems that feature the Two Pointer pattern:
+Squaring a sorted array (easy)
+Triplets that sum to zero (medium)
+Comparing strings that contain backspaces (medium)
+
+Fast and slow pointers
+Also known as hare and tortoise algorithm. This approach is quiite useful when dealing with cyclic linked list or arrays
+By moving at different speeds (say, in a cyclic linked list), the algorithm proves that the two pointers are bound to meet. 
+The fast pointer should catch the slow pointer once both the pointers are in a cyclic loop.
+
+How do you identify when to use the Fast and Slow pattern?
+The problem will deal with a loop in a linked list or array
+When you need to know the position of a certain element or the overall length of the linked list.
+
+When should I use it over the Two Pointer method mentioned above?
+There are some cases where you shouldn’t use the Two Pointer approach such as in a singly linked list where you can’t move in a backwards direction. An example of when to use the Fast and Slow pattern is when you’re trying to determine if a linked list is a palindrome.
+
+Problems featuring the fast and slow pointers pattern:
+Linked List Cycle (easy)
+Palindrome Linked List (medium)
+Cycle in a Circular Array (hard)
+
+Merge intervals
