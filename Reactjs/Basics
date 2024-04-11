@@ -1,0 +1,10 @@
+When we work on web react dom
+when working on mobile react native
+these two comes under react libraries
+
+the basic way of creating a package is npx node package executeraloows you to work with packages without installing
+while installing we had npm node package manager allows you to install the packages
+craete-react-app  utility
+
+scripts helps in the production of the environment
+start build test eject
