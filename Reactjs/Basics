@@ -8,3 +8,20 @@ craete-react-app  utility
 
 scripts helps in the production of the environment
 start build test eject
+
+index page is the main page that is getting loaded hence it is called single page application SPA
+
+react and react dom libraries are considered and used to change the dom of web
+DOM is a tree structure
+browser has its own DOM but react creates its own DOM called virtual dom and is 
+compared with main dom and only the necessary changes are done in main DOM
+
+the react returns only one tag 
+hence we use <div> to return multiple tags
+in react we can also use <> </> empty tags to return multiple tags it is also called fragment tags
+
+the componenets name must be capital
+name with capital even the file names must be capital
+
+main renders the app
+app here has the function which returns the html tags
