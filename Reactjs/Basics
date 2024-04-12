@@ -25,3 +25,38 @@ name with capital even the file names must be capital
 
 main renders the app
 app here has the function which returns the html tags
+
+the function that is returned by the react how is it displayed to function
+whatever elements are there in react it tries to make a tree of it
+the first thing react does is 
+type: tells the type of the elements
+props : it is the element , the properties of the elements are stored in key value pair type
+
+const reactElement = {
+    type: 'a',
+    props:{
+        href: 'https://google.com',
+        target: '_blank'
+    },
+    children: 'Click me to visit google'
+}
+
+customRender(reactElement, mainContainer)     // this is a method
+
+render what - reactElement
+render where - mainContainer
+function customRender(reactElement, container){
+    const domElement = document.createElement      // create the dom element and write where do you want it to be injected
+    (reactElement.type)          //dierectly we cannot give react element hence we take type
+    domElement.innerHTML = reactElement.children
+    domElement.setAttribute('href', reactElement.props.href)
+    domElement.setAttribute('target', reactElement.props.target)
+    container.appendChild(domElement)
+
+}
+
+the above code is not good when more number of elements are there hence we are creating a loop now for the tags
+
+const domElement = document.createElement
+(reactElement.type)
+domElement
